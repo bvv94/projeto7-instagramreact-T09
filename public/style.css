@@ -174,7 +174,7 @@ span {
 .posts {
   background-color: #ffffff;
   max-width: 614px;
-  height: 749px;
+  max-height: 749px;
   margin-top: 24px;
   margin-bottom: 60px;
   border: 1px solid #dbdbdb;
