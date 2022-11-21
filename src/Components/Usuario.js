@@ -7,7 +7,10 @@ const [img, setImg] = React.useState("./assets/catanacomics.svg");
 // let imgperfil = "https://img1.gratispng.com/20180401/goe/kisspng-user-profile-computer-icons-profile-5ac09244d91906.2547020615225697968892.jpg";
 
     function novoNome() {
-        setNome (prompt("Informe o novo nome: "));  
+        const nome = prompt("Informe o novo nome: ");
+        if (nome){
+            setNome (nome);  
+        }
     }
 
     function novaImagem() {

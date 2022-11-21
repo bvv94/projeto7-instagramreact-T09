@@ -23,7 +23,7 @@ function Post(props) {
 
     const click = 1;
     const [salvar, setSalvar] = React.useState(<ion-icon name="bookmark-outline"></ion-icon>);
-    const [curtida, setCurtida] = React.useState(101.523);
+    const [curtida, setCurtida] = React.useState(1.523);
     const [heart, setHeart] = React.useState(<ion-icon name="heart-outline" onClick={curtir}></ion-icon>)
 
     function salve() {
