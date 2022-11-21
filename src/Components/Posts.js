@@ -1,11 +1,11 @@
 export default function Posts() {
 
     const posts = [
-        {imgperfil: "./assets/meowed.svg", nomeperfil: "meowed", imgpost: "./assets/gato-telefone.svg"},
+        {imgperfil: "./assets/perfil.png", nomeperfil: "isabelamavie", imgpost: "./assets/post3.jpeg"},
         {imgperfil: "./assets/barked.svg", nomeperfil: "barked", imgpost: "./assets/dog.svg"},
-        {imgperfil: "./assets/perfil.png", nomeperfil: "isabelamavie", imgpost: "./assets/analisecorporal.jpeg"},
+        {imgperfil: "./assets/perfil.png", nomeperfil: "isabelamavie", imgpost: "./assets/post1.jpeg"},
         {imgperfil: "./assets/barked.svg", nomeperfil: "barked", imgpost: "./assets/dog.svg"},
-        {imgperfil: "./assets/perfil.png", nomeperfil: "isabelamavie", imgpost: "./assets/comoFunciona.jpeg"},
+        {imgperfil: "./assets/perfil.png", nomeperfil: "isabelamavie", imgpost: "./assets/post2.jpeg"},
         {imgperfil: "./assets/barked.svg", nomeperfil: "barked", imgpost: "./assets/dog.svg"},
     ]
 
@@ -29,7 +29,7 @@ function Post(props) {
                     <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
                 </div>
             </div>
-            <div class="img">
+            <div data-test="post-image" class="img">
                 <img src={props.imgpost} />
             </div>
             <div class="legenda">
@@ -51,7 +51,7 @@ function Post(props) {
                     <div class="curtidas">
                         <p>
                             Curtido por <span>respondeai</span> e
-                            <span>outras 101.523 pessoas</span>
+                            <span data-test="likes-number">outras 101.523 pessoas</span>
                         </p>
                     </div>
                 </div>

@@ -26,7 +26,7 @@ export default function Usuario() {
             </div>
             <div class="usuario">
                 <div class="nomepublico">catanacomics</div>
-                <div class="nomeusuario" data-test="name">{nomedefault}<span onClick={novoNome}><ion-icon name="pencil-outline" data-test="edit-name"></ion-icon></span></div>
+                <div class="nomeusuario" data-test="name">{nomedefault}<span  data-test="edit-name" onClick={novoNome}><ion-icon name="pencil-outline"></ion-icon></span></div>
             </div>
         </div>
     )

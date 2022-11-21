@@ -177,6 +177,8 @@ span {
   border-radius: 5px;
 }
 
+
+
 .cabecalho {
   height: 60px;
   display: flex;
@@ -212,6 +214,10 @@ span {
 .img img {
   max-width: 612px;
   max-height: 612px;
+}
+.img{
+  display: flex;
+  justify-content: center;
 }
 
 .legenda {
