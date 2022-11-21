@@ -20,41 +20,21 @@ export default function Posts() {
 }
 
 function Post(props) {
-    let a=0;
+    let a = 0;
     const [salvar, setSalvar] = React.useState(<ion-icon name="bookmark-outline"></ion-icon>);
     const [curtida, setCurtida] = React.useState(11523);
     const [heart, setHeart] = React.useState(<span data-test="like-post"><ion-icon name="heart-outline" onClick={curtir}></ion-icon></span>)
 
     function salve() {
         setSalvar(<ion-icon name="bookmark"></ion-icon>);
-        
-
     }
 
     function curtir() {
-        // let click = 0;
-
-        // setCurtida(() => curtida + 1);
         
-        // if(click == 0){
-        //     setHeart(<span class="red" data-test="like-post"><ion-icon name="heart" onClick={curtir}></ion-icon></span>);
-        //     click++;
-        //     console.log("entrou no setHeart Red");
-        // }
-        // else{
-        //     click = 0;
-        //     setHeart (<span data-test="like-post"><ion-icon name="heart-outline" onClick={curtir}></ion-icon></span>);
-        //     console.log("entrou no setHeart Outline");
-        // }
-
         setCurtida(() => curtida + 1);
         setHeart(<span class="red" data-test="like-post"><ion-icon name="heart" onClick={curtir}></ion-icon></span>);
 
     }
-
-    // function cliqueduplo(){
-    //     setCurtida(() => curtida + 1);
-    // }
 
     return (
         <div class="posts" data-test="post">
