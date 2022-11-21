@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Posts() {
 
     const posts = [
@@ -18,6 +20,13 @@ export default function Posts() {
 }
 
 function Post(props) {
+
+    const [salvar, setSalvar] = React.useState(<ion-icon name="bookmark-outline"></ion-icon>);
+
+    function salve(){
+        setSalvar (<ion-icon name="bookmark"></ion-icon>);
+    }
+
     return (
         <div class="posts" data-test="post">
             <div class="cabecalho">
@@ -39,8 +48,8 @@ function Post(props) {
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
-                    <div class="salvar">
-                        <ion-icon name="bookmark-outline"></ion-icon>
+                    <div onClick={salve} class="salvar" data-test="save-post">
+                        {salvar}
                     </div>
                 </div>
 
