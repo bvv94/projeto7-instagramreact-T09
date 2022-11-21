@@ -1,19 +1,25 @@
 export default function Posts() {
+
+    const posts = [
+        {imgperfil: "./assets/meowed.svg", nomeperfil: "meowed", imgpost: "./assets/gato-telefone.svg"},
+        {imgperfil: "./assets/barked.svg", nomeperfil: "barked", imgpost: "./assets/dog.svg"},
+        {imgperfil: "./assets/perfil.png", nomeperfil: "isabelamavie", imgpost: "./assets/analisecorporal.jpeg"},
+        {imgperfil: "./assets/barked.svg", nomeperfil: "barked", imgpost: "./assets/dog.svg"},
+        {imgperfil: "./assets/perfil.png", nomeperfil: "isabelamavie", imgpost: "./assets/comoFunciona.jpeg"},
+        {imgperfil: "./assets/barked.svg", nomeperfil: "barked", imgpost: "./assets/dog.svg"},
+    ]
+
+
     return (
         <div>
-            <Post imgperfil = "./assets/meowed.svg" nomeperfil = "meowed" imgpost="./assets/gato-telefone.svg"/>
-            <Post imgperfil = "./assets/barked.svg" nomeperfil = "barked" imgpost="./assets/dog.svg"/>
-            <Post imgperfil = "./assets/meowed.svg" nomeperfil = "meowed" imgpost="./assets/gato-telefone.svg"/>
-            <Post imgperfil = "./assets/barked.svg" nomeperfil = "barked" imgpost="./assets/dog.svg"/>
-            <Post imgperfil = "./assets/meowed.svg" nomeperfil = "meowed" imgpost="./assets/gato-telefone.svg"/>
-            <Post imgperfil = "./assets/barked.svg" nomeperfil = "barked" imgpost="./assets/dog.svg"/>
+            {posts.map((p)=> <Post imgperfil={p.imgperfil} nomeperfil={p.nomeperfil} imgpost={p.imgpost}/>)}
         </div>
-        )
+    )
 }
 
-function Post(props){
-    return(
-        <div class="posts">
+function Post(props) {
+    return (
+        <div class="posts" data-test="post">
             <div class="cabecalho">
                 <div class="logopost">
                     <img src={props.imgperfil} />
@@ -24,7 +30,7 @@ function Post(props){
                 </div>
             </div>
             <div class="img">
-                <img src={props.imgpost}/>
+                <img src={props.imgpost} />
             </div>
             <div class="legenda">
                 <div class="icones">

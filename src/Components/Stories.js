@@ -1,31 +1,33 @@
 export default function Stories() {
-
+    const stories = [
+        {imgperfil:"./assets/9gag.svg" ,nomeperfil:"9gag" },
+        {imgperfil:"./assets/meowed.svg" ,nomeperfil:"meowed" },
+        {imgperfil:"./assets/barked.svg" ,nomeperfil:"barked" },
+        {imgperfil:"./assets/respondeai.svg" ,nomeperfil:"respondeai" },
+        {imgperfil:"./assets/perfil.png" ,nomeperfil:"isabelamavie" },
+        {imgperfil:"./assets/nathanwpylestrangeplanet.svg" ,nomeperfil:"nathanwpylestrangeplanet" },
+        {imgperfil:"./assets/filomoderna.svg" ,nomeperfil:"filomoderna" },
+        {imgperfil:"./assets/wawawicomics.svg" ,nomeperfil:"wawawicomics" },
+        {imgperfil:"./assets/9gag.svg" ,nomeperfil:"9gag" }
+    ]
     return (
         <div class="stories">
-            <Story imgperfil="./assets/9gag.svg" nomeperfil="9gag" />
-            <Story imgperfil="./assets/meowed.svg" nomeperfil="meowed" />
-            <Story imgperfil="./assets/barked.svg" nomeperfil="barked" />
-            <Story imgperfil="./assets/respondeai.svg" nomeperfil="respondeai" />
-            <Story imgperfil="./assets/memeriagourmet.svg" nomeperfil="memeriagourmet" />
-            <Story imgperfil="./assets/nathanwpylestrangeplanet.svg" nomeperfil="nathanwpylestrangeplanet" />
-            <Story imgperfil="./assets/filomoderna.svg" nomeperfil="filomoderna" />
-            <Story imgperfil="./assets/wawawicomics.svg" nomeperfil="wawawicomics" />
-            <Story imgperfil="./assets/9gag.svg" nomeperfil="9gag" />
+            {stories.map((st)=> <Story imgperfil={st.imgperfil} nomeperfil={st.nomeperfil} />)}            
         </div>
     )
 }
 
 function Story(props) {
-
     return (
         <div>
             {/* stories normal */}
             <div class="icone"> {/*icone para passar stories na tela */}
+                {/* <ion-icon name="chevron-forward-circle"></ion-icon> */}
             </div>
-            {/* <ion-icon name="chevron-forward-circle"></ion-icon> */}
+
             <div class="story">
                 <div class="logos">
-                    <img class="circulo" src="./assets/stories_background.jpg" />
+                    <img class="circulos" src="./assets/stories_background.jpg" />
                     <div class="imagemconta">
                         <img src={props.imgperfil} />
                     </div>
@@ -36,7 +38,7 @@ function Story(props) {
             <div class="storiesmobile">
                 <div class="story">
                     <div class="logos">
-                        <img class="circulo" src="./assets/stories_background.jpg" />
+                        <img class="circulos" src="./assets/stories_background.jpg" />
                         <div class="imagemconta">
                             <img src={props.imgperfil} />
                         </div>

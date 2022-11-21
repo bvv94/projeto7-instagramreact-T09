@@ -94,7 +94,7 @@ body {
 }
 
 .stories {
-  border-radius: 3px;
+  border-radius: 5px;
   border: #dbdbdb 1px solid;
   background-color: #ffffff;
   font-size: 12px;
@@ -146,10 +146,11 @@ span {
 .central {
   display: flex;
   justify-content: center;
+  /* overflow: hidden; */
   font-weight: 400;
 }
 
-.circulo {
+.circulos {
   width: 66px;
   height: 66px;
 }
@@ -209,7 +210,8 @@ span {
 }
 
 .img img {
-  width: 100%;
+  max-width: 612px;
+  max-height: 612px;
 }
 
 .legenda {
@@ -278,6 +280,11 @@ span {
   padding-right: 17px;
 }
 
+.foto img{
+  width: 56px;
+  height: 56px;
+}
+
 .nomepublico {
   font-size: 14px;
   font-weight: 500;
@@ -295,6 +302,11 @@ span {
 .nomeusuario ion-icon{
   width: 14px;
   margin-left: 3px;
+  
+}
+
+.nomeusuario ion-icon :hover{
+  cursor: pointer;
 }
 
 .sugestoes {
@@ -344,6 +356,8 @@ span {
 
 .logoseguir img {
   margin-right: 11px;
+  width: 32px;
+  height: 32px;
 }
 
 .nomesug {
