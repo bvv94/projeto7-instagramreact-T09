@@ -3,28 +3,35 @@ import React from "react";
 export default function Posts() {
 
     const posts = [
-        {imgperfil: "./assets/perfil.png", nomeperfil: "isabelamavie", imgpost: "./assets/post3.jpeg"},
-        {imgperfil: "./assets/barked.svg", nomeperfil: "barked", imgpost: "./assets/dog.svg"},
-        {imgperfil: "./assets/perfil.png", nomeperfil: "isabelamavie", imgpost: "./assets/post1.jpeg"},
-        {imgperfil: "./assets/barked.svg", nomeperfil: "barked", imgpost: "./assets/dog.svg"},
-        {imgperfil: "./assets/perfil.png", nomeperfil: "isabelamavie", imgpost: "./assets/post2.jpeg"},
-        {imgperfil: "./assets/barked.svg", nomeperfil: "barked", imgpost: "./assets/dog.svg"},
+        { imgperfil: "./assets/perfil.png", nomeperfil: "isabelamavie", imgpost: "./assets/post3.jpeg" },
+        { imgperfil: "./assets/barked.svg", nomeperfil: "barked", imgpost: "./assets/dog.svg" },
+        { imgperfil: "./assets/perfil.png", nomeperfil: "isabelamavie", imgpost: "./assets/post1.jpeg" },
+        { imgperfil: "./assets/barked.svg", nomeperfil: "barked", imgpost: "./assets/dog.svg" },
+        { imgperfil: "./assets/perfil.png", nomeperfil: "isabelamavie", imgpost: "./assets/post2.jpeg" },
+        { imgperfil: "./assets/barked.svg", nomeperfil: "barked", imgpost: "./assets/dog.svg" },
     ]
 
 
     return (
         <div>
-            {posts.map((p)=> <Post imgperfil={p.imgperfil} nomeperfil={p.nomeperfil} imgpost={p.imgpost}/>)}
+            {posts.map((p) => <Post imgperfil={p.imgperfil} nomeperfil={p.nomeperfil} imgpost={p.imgpost} />)}
         </div>
     )
 }
 
 function Post(props) {
 
+    const click = 1;
     const [salvar, setSalvar] = React.useState(<ion-icon name="bookmark-outline"></ion-icon>);
+    const [curtida, setCurtida] = React.useState(101.523);
+    const [heart, setHeart] = React.useState(<ion-icon name="heart-outline" onClick={curtir}></ion-icon>)
 
-    function salve(){
-        setSalvar (<ion-icon name="bookmark"></ion-icon>);
+    function salve() {
+        setSalvar(<ion-icon name="bookmark"></ion-icon>);
+    }
+    function curtir() {
+        setCurtida(() => curtida + 1);
+        setHeart(<span class="red"><ion-icon name="heart" onClick={curtir}></ion-icon></span>);
     }
 
     return (
@@ -39,12 +46,12 @@ function Post(props) {
                 </div>
             </div>
             <div data-test="post-image" class="img">
-                <img src={props.imgpost} />
+                <img onDoubleClick={curtir} src={props.imgpost} />
             </div>
             <div class="legenda">
                 <div class="icones">
                     <div class="opcoes" data-test="like-post">
-                        <ion-icon name="heart-outline"></ion-icon>
+                        {heart}
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
@@ -60,7 +67,7 @@ function Post(props) {
                     <div class="curtidas">
                         <p>
                             Curtido por <span>respondeai</span> e
-                            <span data-test="likes-number">outras 101.523 pessoas</span>
+                            <span data-test="likes-number"> outras {curtida} pessoas</span>
                         </p>
                     </div>
                 </div>
