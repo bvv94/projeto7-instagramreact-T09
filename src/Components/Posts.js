@@ -43,7 +43,7 @@ function Post(props) {
             </div>
             <div class="legenda">
                 <div class="icones">
-                    <div class="opcoes">
+                    <div class="opcoes" data-test="like-post">
                         <ion-icon name="heart-outline"></ion-icon>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
