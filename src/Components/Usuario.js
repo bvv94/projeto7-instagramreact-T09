@@ -1,20 +1,20 @@
 import React from "react";
 
 export default function Usuario() {
-const [nome, setNome] = React.useState("Catana");
-const [img, setImg] = React.useState("./assets/catanacomics.svg");
+    const [nome, setNome] = React.useState("Catana");
+    const [img, setImg] = React.useState("./assets/catanacomics.svg");
 
-// let imgperfil = "https://img1.gratispng.com/20180401/goe/kisspng-user-profile-computer-icons-profile-5ac09244d91906.2547020615225697968892.jpg";
+    // let imgperfil = "https://img1.gratispng.com/20180401/goe/kisspng-user-profile-computer-icons-profile-5ac09244d91906.2547020615225697968892.jpg";
 
     function novoNome() {
         const nome = prompt("Informe o novo nome: ");
-        if (nome){
-            setNome (nome);  
-        }
+        setNome(nome ? nome : ("Catana"));
+
     }
 
     function novaImagem() {
-        setImg (prompt ("Informe o link da nova imagem: "))
+        const img = prompt("Informe o link da nova imagem: ");
+        setImg(img ? img : ("./assets/catanacomics.svg"))
     }
 
     return (
